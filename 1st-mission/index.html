@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <title>UMC TODO</title>
+  </head>
+  <body>
+    <!--todo-container영역-->
+    <div class="todo-container">
+      <!--todo-container__header-->
+      <h1 class="todo-container__header">YONG TODO</h1>
+      <!--todo-conatiner__form영역-->
+      <form id="todo-form" class="todo-container__form">
+        <input
+          type="text" 
+          id="todo-input"
+          class="todo-container__input" 
+          placeholder="할 일을 입력해주세요."
+          required
+          />
+          <!-- required = 입력값이 반드시 있어야 제출 가능-->
+          <button type="submit" class="todo-container__button">할일 추가</button>
+      </form>
+      <!--todo-container__form영역 끝-->
+      <div class="render-container">
+        <div class="render-container__section">
+          <h2 class="render-container__title">할 일</h2>
+          <ul id="todo-list" class="render-container__list"></ul>
+      </div>
+      <div class="render-container__section">
+          <h2 class="render-container__title">완료</h2>
+          <ul id="done-list" class="render-container__list"></ul>
+      </div>
+    </div>
+    <!--todo-container영역 끝-->
+    <!--defer = HTML을 다 읽은 후에 JavaScript 실행-->
+    <script type="module" src="./script.js" defer></script>
+  </body>
+</html>
